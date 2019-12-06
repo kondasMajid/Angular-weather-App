@@ -5,12 +5,10 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatInputModule, MatButtonModule, MatIconModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EventsComponent,
     ],
   imports: [
     BrowserModule,

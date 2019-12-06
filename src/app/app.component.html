@@ -5,7 +5,7 @@
   <img
     width="40"
   />
-  <span>Weather App</span>
+  <!-- <span>Weather App</span> -->
     <div class="spacer"></div>
   <h3 style="margin-right: 20px">{{day}}</h3>
 </div>
@@ -13,18 +13,18 @@
 <div class="content" role="main">
 
   <!-- Highlight Card (keyup)="onKey($event)" -->
-  <div class="card highlight-card card-small">
+  <div class="card highlight-card card-small" style="    width: 50%;">
 
       <mat-form-field class="example-full-width">
-        <input matInput placeholder="Enter city name" style="color: aliceblue" name="userInput" [(ngModel)]="userInput">
+        <input matInput placeholder="Enter city name" style="color: aliceblue;     width: 50%; " name="userInput" [(ngModel)]="userInput">
       </mat-form-field>
       
-      <button mat-mini-fab aria-label="Example icon-button with a heart icon" style="margin-left: 10px" (click)="getWeather()">
+      <button mat-mini-fab aria-label="Example icon-button with a heart icon" style="margin-left: 10px; width: 60px;height: 60px;" (click)="getWeather()">
         <mat-icon>search</mat-icon>
       </button>
     
   </div>
-<div *ngIf="userInput">
+<div >
       <h3>Current temp: {{Data?.main?.temp}} °C</h3>
     <p>City : {{Data?.name}}</p>
     <p>Humidity : {{Data?.main?.humidity }} %</p>
