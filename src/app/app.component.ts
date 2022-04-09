@@ -32,7 +32,7 @@ export class AppComponent {
 
     }
     else {
-      let weatherAPi = 'http://api.openweathermap.org/data/2.5/weather?q=' + this.userInput + '&APPID=d37a62076c5d10716ae0a27b849bc36c';
+      let weatherAPi = 'http://api.openweathermap.org/data/2.5/weather?q=' + this.userInput + '&APPID=API HERE';
       // &units=metric
       console.log(this.userInput)
 
