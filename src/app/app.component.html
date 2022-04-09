@@ -1,11 +1,7 @@
-
-
 <div class="toolbar" role="banner">
-  <img
-    width="40"
-  />
+  <img width="40" />
   <span>Weather App</span>
-    <div class="spacer"></div>
+  <div class="spacer"></div>
   <h3 style="margin-right: 20px">{{day}}</h3>
 </div>
 
@@ -13,27 +9,33 @@
 
   <div class="card highlight-card card-small" style="    width: 50%;">
 
-      <mat-form-field class="example-full-width">
-        <input matInput placeholder="Enter city name" style="color: aliceblue;     width: 50%; " name="userInput" [(ngModel)]="userInput">
-      </mat-form-field>
-      
-      <button mat-mini-fab aria-label="Example icon-button with a heart icon" style="margin-left: 10px; width: 60px;height: 60px;" (click)="getWeather()">
-        <mat-icon [(ngModel)]="binding"> search</mat-icon>
-      </button>
-    
-  </div>
-<div>
-   <div class="row">
-    <div class="col-md-4">
-      <h3 style="font-weight: 500;">  {{Data?.main?.temp}} °C </h3>
-         
-    </div>
-    <div class="col-md-4">
-      <h3>City : {{Data?.name}}</h3>
-    </div>
-    <div class="col-md-4">
-      <h3>Humidity : {{Data?.main?.humidity }} %</h3>
-    </div>
-   </div>
-</div>
+    <mat-form-field class="example-full-width">
+      <input matInput placeholder="Enter city name" style="color: aliceblue;     width: 50%; " name="userInput"
+        [(ngModel)]="userInput">
+    </mat-form-field>
 
+    <button mat-mini-fab aria-label="Example icon-button with a heart icon"
+      style="margin-left: 10px; width: 60px;height: 60px;" (click)="getWeather()">
+      <mat-icon > search</mat-icon>
+    </button>
+
+  </div>
+  <div *ngIf="userInput">
+    <div class="row">
+      <div class="col-md-4">
+        <h3 style="font-weight: 500;"> {{Data?.main?.temp}} °C </h3>
+
+      </div>
+      <div class="col-md-4">
+        <h3>City : {{Data?.name}}</h3>
+      </div>
+      <div class="col-md-4">
+        <h3>Humidity : {{Data?.main?.humidity }} %</h3>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12"><h3>City : {{Data?.name}}</h3></div>
+      </div>
+    </div>
+  </div>
